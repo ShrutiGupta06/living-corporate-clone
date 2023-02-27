@@ -1,0 +1,732 @@
+@font-face {
+    font-family: "Bureau Grot Condensed Black";
+    src: url(/bureau_grot_condensed_black.ttf);
+}
+@font-face {
+    font-family: "Bureau Grot Wide";
+    src: url(/bureau_grot_wide_book.ttf);
+}
+@font-face {
+    font-family: "Bureau Grot Black";
+    src: url(/bureau_grot_black.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(/roboto-regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+#html,body::-webkit-scrollbar{
+    display: none;
+}
+#full-scr-nav{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    position: absolute;
+    top: -100%;
+    z-index: 999999;
+}
+
+#full-scr-nav h2{
+    font-size: 3.5vw;
+    color: #FEF9F3;
+    font-family:"Bureau Grot Condensed Black" ;
+}
+#nav{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 9999999;
+    background-color: #FEF9F3;
+    transition: all linear 0.5s;
+    
+}
+#nav #left-nav{
+    height: 100%;
+    width: 74vw;
+    padding: 1vw 2vw;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#left-nav h2{
+    margin-right: 16vw;
+    line-height: 1;
+    font-size: 1.6vw;
+    font-family: "Bureau Grot Black";
+
+}
+#left-nav #menu{
+    font-size: 4vw;
+    font-weight: 900;
+}
+#left-nav #search{
+    font-size: 2.5vw;
+    font-weight: 900;
+    transition: all linear 0.2s;
+}
+#nav #right-nav{
+    height: 100%;
+    width: 26vw;
+    display: flex;
+}
+#right-nav #Lft-button{
+    width: 55%;
+    height: 100%;
+    background-color: #FEF9F3;
+    font-size: 1vw;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    font-family: "Bureau Grot Black";
+    transition: all linear 0.2s;
+    cursor: pointer;
+}
+#right-nav #Rgt-button{
+    width: 45%;
+    height: 100%;
+    background-color: black;
+    color: #fff;
+    font-size: 1vw;
+    border: none;
+    font-family: "Bureau Grot Black";
+    transition: all linear 0.2s;
+    cursor: pointer;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#main #page1{
+    height: 100vh;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+#page1 #page1-left{
+    height: 100%;
+    width: 50%;
+    background-color: #DF80AC;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 69vh;
+    padding-left: 1.8vw;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+}
+
+#page1-left #sml-headings{
+    position: relative;
+    margin-bottom: 5vh;
+}
+#sml-headings h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    position: absolute;
+    opacity: 0;
+}
+#page1-left #lrg-headings{
+    position: relative;  
+}
+#lrg-headings h1{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 5.5vw;
+    line-height: 1;
+    white-space: nowrap;
+    position: absolute;
+    opacity: 0;
+}
+
+#page1 #page1-right{
+    height: 100%;
+    width: 50%;
+    background-color: #FEF9F3;
+    position: relative;
+}
+#page1-right #page1-img{
+    width: 75%;
+    height: 65%;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    opacity: 1;
+    scale: 1;
+}
+#page1-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 0;
+    opacity: 0;
+    position: absolute;
+}
+#page1-right #right-cntnt{
+    display: flex;
+    gap: 1vw;
+    position: absolute;
+    bottom: 6%;
+    left: 9%;
+
+}
+#right-cntnt h5{
+    font-size: 1vw;
+    font-family: "Bureau Grot Black";
+}
+#right-cntnt #filling-box{
+    height: 2vh;
+    width: 34vw;
+    border: 2px solid black;
+    box-shadow: 3px 3px;
+    border-radius: 10vw;
+    position: relative;
+}
+#filling-box .filling-line{
+    height: 100%;
+    width: 0%;
+    /* width: 100%; */
+    background-color: #DF80AC;
+    border-radius: 10vw;
+    position: absolute;
+}
+#main #page2{
+    width: 100%;
+    height: 107vh;
+    position: relative;
+}
+#page2-top{
+    width: 100vw;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 1.5vw;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+}
+#page2-top h2{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 3.2vw;
+    margin-right: 35vw;
+}
+#page2-top h6{
+    font-family: "Bureau Grot Wide";
+    font-size: 0.9vw;
+    font-weight: 100;
+    line-height: 1.3;
+}
+#page2-top h5{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+}
+/* #page2-bottom{
+    height: 89vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;  
+    
+}
+#page2-bottom::-webkit-scrollbar{
+    display: none;
+}
+#page2-bottom .boxes{
+    height: 100%;
+    width: 38vw;
+    border-right: 1px solid black;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.boxes .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.boxes img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.boxes .inner-box{
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    height: 10%;
+    width: 100%;
+    background-color: #fff;
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2vw;
+}
+.inner-box h5{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+} */
+
+#page2-btm{
+    height: 89vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; 
+    /* position: relative; */
+}
+#page2-btm::-webkit-scrollbar{
+    display: none;
+}
+#page2-btm .boxes{
+    height: 100%;
+    width: 38vw;
+    border-right: 1px solid black;
+    display: inline-block;
+    overflow: hidden; 
+}
+.boxes img{
+    object-fit: cover;
+    height: 90%;
+    width: 100%;
+}
+#page2 #page2-btm2{
+    height: 89vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    /* background-color: #FEF9F3; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+}
+#page2-btm2::-webkit-scrollbar{
+    display: none;
+}
+#page2-btm2 .overlay-box{
+    height: 100%;
+    width: 38vw;
+    border-right: 1px solid black;
+    background-color: #FEF9F3;
+    display: inline-block;
+    overflow: hidden; 
+    position: relative;
+}
+.overlay-box .ovel-egg{
+    height: 90%;
+    width: 90%;
+    /* background-color: plum; */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(40deg);
+    -webkit-clip-path: ellipse(32% 50% at 50% 50%);
+    clip-path: ellipse(32% 50% at 50% 50%);
+}
+.ovel-egg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: rotate(-40deg);
+}
+.overlay-box .inner-box{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    font-family: "Bureau Grot Black";
+}
+main #page3{
+    width: 100vw;
+    height: 89vh;
+}
+#page3 #page3-top{
+    height: 74vh;
+    width: 100%;
+    background-color: #E5855E;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#page3-top h1{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 5.5vw;
+}
+#page3-top h5{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    text-align: center;
+}
+#page3-top button{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    height: 9vh;
+    width: 14vw;
+    border-radius: 10vw;
+    border: 1.5px solid black;
+    background-color: #FEF9F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3 #page3-btm{
+    height: 15vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    padding: 2vw 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page3-btm h2{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 3.5vw;
+    margin-right: 35vw;
+}
+#page3-btm h6{
+    font-family: "Bureau Grot Wide";
+    font-size: 0.9vw;
+    font-weight: 100;
+    line-height: 1.3;
+}
+#page3-btm h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+}
+#main #page4{
+    height: 104vh;
+    width: 100vw;
+}
+#page4 #page4-top{
+    display: flex;
+    height: 88vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#page4-top #page4-top-left{
+    height: 100%;
+    width: 50%;
+    background-color: #895434;
+    position: relative;
+}
+#page4-top-left h1{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 5.5vw;
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+}
+#page4-top-left #one{
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 3px 3px;
+    border-radius: 50%;
+    font-size: 1vw;
+    font-family: "Bureau Grot Black";
+    height:4vw;
+    width: 4vw; 
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+}
+#page4-top-left #two{
+    background-color: #895434;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 1vw;
+    font-family: "Bureau Grot Black";
+    height:4vw;
+    width: 4vw; 
+    position: absolute;
+    bottom: 4%;
+    left: 15%;
+}
+#page4-top #page4-top-right{
+    height: 100%;
+    width: 50%;
+}
+#page4-top-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page4 #page4-btm{
+    height: 15vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    padding: 2vw 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page4-btm h2{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 3.5vw;
+    margin-right: 35vw;
+}
+#page4-btm h6{
+    font-family: "Bureau Grot Wide";
+    font-size: 0.9vw;
+    font-weight: 100;
+    line-height: 1.3;
+}
+#page4-btm h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+}
+#main #page5{
+    height: 120vh;
+    width: 100vw;
+}
+#page5 .strips{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 1.5vw;
+    height: 20vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    position: relative;
+}
+
+.strips a{
+    text-decoration: none;
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 3.5vw;
+    margin-right: 35vw;
+    color: black;
+}
+.strips h6{
+    font-family: "Bureau Grot Black";
+    font-size: 0.9vw;
+}
+.strips img{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    z-index: 99;
+    transform: rotate(-40deg);
+    -webkit-clip-path: ellipse(32% 50% at 50% 50%);
+    clip-path: ellipse(32% 50% at 50% 50%);
+    scale: 0;
+    opacity: 0;
+    transition: all linear 2;
+    object-fit: cover;
+    
+}
+
+#main #page6{
+    width: 100vw;
+    height: 89vh;
+}
+#page6 #page6-top{
+    height: 74vh;
+    width: 100%;
+    background-color: #DF80AC;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#page6-top h1{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 5.5vw;
+}
+#page6-top h5{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    text-align: center;
+}
+#page6-top button{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    height: 9vh;
+    width: 14vw;
+    border-radius: 10vw;
+    border: 1.5px solid black;
+    background-color: #FEF9F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page6 #page6-btm{
+    height: 15vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #FEF9F3;
+    padding: 2vw 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page6-btm h2{
+    font-family: "Bureau Grot Condensed Black";
+    font-size: 3.5vw;
+    margin-left: 28vw;
+}
+#page6-btm h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+}
+#main #page7{
+    height: 50vh;
+    width: 100vw;
+}
+#page7 #page7-top{
+    background-color: #FEF9F3;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 1.5vw;
+}
+#page7-top img{
+    height: 7vh;
+    width: 7vw;
+    filter: invert(1);
+}
+#page7 #page7-btm{
+    background-color: #FEF9F3;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 2.5vw;
+}
+#page7-btm img{
+    height: 7vh;
+    width: 7vw;
+    filter: invert(1);
+}
+#main #page8{
+    height: 70vh;
+    width: 100vw;    
+}
+#page8 #page8-top{
+    height: 20vh;
+    width: 100%;
+    padding: 2vw 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+#page8-top h2{
+    line-height: 1;
+    font-size: 1.6vw;
+    font-family: "Bureau Grot Black";
+}
+#page8-top h6{
+    font-family: "Bureau Grot Wide";
+    font-size: 0.9vw;
+    font-weight: 100;
+    line-height: 1.3;
+}
+#page8-top button{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    height: 9vh;
+    width: 14vw;
+    margin-left: 8vw;
+    border-radius: 10vw;
+    border: 1.5px solid black;
+    background-color: #FEF9F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page8 #page8-center{
+    height: 40vh;
+    width: 100%;
+    padding: 0vw 1.5vw;
+    display: flex;
+    gap: 8vw;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+#page8-center .list{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.list h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+}
+#page8 #page8-btm{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 1.5vw;
+    background-color: black;
+}
+#page8-btm h4{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    color: white;
+}
+#page8-btm h5{
+    font-family: "Bureau Grot Black";
+    font-size: 1vw;
+    color: gray;
+}
+#page8-btm #logo-box{
+    display: flex;
+    gap: 2vw;
+}
+#logo-box i{
+    color: white;
+    font-size: 2vw;
+}
